@@ -29,7 +29,7 @@ th, td {
 </style>
 <x-app-layout>
 
-<div style="margin-left: 30rem;">
+<div style="align-items: center;">
 <table class="table">
   <thead class="thead-dark">
     <tr>

@@ -8,8 +8,13 @@
 
 <style>
 body {
+  margin-top: 0;
+  padding: 0;
   background-image: url('images/c5.jpg');
   background-size: cover;
+  height: -webkit-fill-available;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .form-group{
@@ -51,8 +56,10 @@ body {
   display: flex;
   flex-direction: column;
   width: 720px;
-  height: auto;
+  height: -webkit-fill-available;
   /* border: 1px solid black; */
+  justify-content: center;
+  justify-items: center;
   align-items: left;
   margin: auto;
   margin-top: 50px;

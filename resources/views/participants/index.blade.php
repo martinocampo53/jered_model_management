@@ -34,8 +34,8 @@ th, td {
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
+      <th scope="col">First Name</th>
       <th scope="col">Email</th>
       <th scope="col">Phone Number</th>
       <th scope="col">Ticket Type</th>
@@ -57,11 +57,14 @@ th, td {
         <td>
     <a href="{{ route('participants.view', ['participant' => $participant]) }}"><i class="fas fa-eye"></i></i></a> 
     <a href="{{ route('participants.qr', ['participant' => $participant]) }}"><i class="fas fa-qrcode"></i></a>
-  <form method="post" action="{{ route('participants.destroy', ['participant' => $participant]) }}">
+
+    <form method="post" action="{{ route('participants.destroy', $participant->id) }}" onsubmit="return confirm('Are you sure you want to delete this participant?')">
   @csrf
   @method('delete')
-    <a href="#"><i class="fas fa-trash"></i></a>
-  </form>
+  <button type="submit" class="btn-danger"><i class="fas fa-trash"></i></button>
+</form>
+
+
         </td>
     </tr>
      @endforeach

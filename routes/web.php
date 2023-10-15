@@ -35,7 +35,8 @@ Route::get('/participants/index', [ParticipantController::class, 'index'])->name
 Route::get('/participants/{participant}/edit', [ParticipantController::class, 'edit'])->name('participants.edit');
 Route::get('/participants/{participant}/view', [ParticipantController::class,'view'])->name('participants.view');
 Route::get('/participants/{participant}/qr', [ParticipantController::class,'qr'])->name('participants.qr');
-Route::delete('/participants/{participant}/destroy', [ParticipantController::class,'destroy'])->name('participants.destroy');
+Route::delete('/participants/{participant}', [ParticipantController::class, 'destroy'])->name('participants.destroy');
+
 
 
 

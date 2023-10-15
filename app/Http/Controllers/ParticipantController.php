@@ -73,20 +73,18 @@ class ParticipantController extends Controller
 
     }    
 
-    public function destroy(Participants $participants)
+    public function destroy(Participants $participant)
     {
-        $attendee = Participants::get();
-        $attendee->delete();   
-
-        return back()->with('confirmation','Are you sure?');
-        
+        $participant->delete();
+    
+        return redirect()->route('participants.index')->with('success', 'Participant deleted successfully');
     }
+
+    
 
     public function qr(Participants $participant)
     {
         $participants = Participants::get();
-       
-        
         return view('participants.qr', ['participant' => $participant]);
 
     }    

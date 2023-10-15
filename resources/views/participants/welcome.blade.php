@@ -52,6 +52,7 @@ body {
 .box {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
   width: 720px;
   height: auto;
   /* border: 1px solid black; */

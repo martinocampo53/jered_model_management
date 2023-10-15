@@ -8,11 +8,8 @@
 
 <style>
 body {
-  margin-top: 0;
-  padding: 0;
   background-image: url('images/c5.jpg');
   background-size: cover;
-  height: -webkit-fill-available;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -56,10 +53,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 720px;
-  height: -webkit-fill-available;
+  height: auto;
   /* border: 1px solid black; */
-  justify-content: center;
-  justify-items: center;
   align-items: left;
   margin: auto;
   margin-top: 50px;

@@ -37,6 +37,8 @@ Route::get('/participants/{participant}/view', [ParticipantController::class,'vi
 Route::get('/participants/{participant}/qr', [ParticipantController::class,'qr'])->name('participants.qr');
 Route::delete('/participants/{participant}', [ParticipantController::class, 'destroy'])->name('participants.destroy');
 
+Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
+
 
 
 

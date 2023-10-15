@@ -116,9 +116,9 @@ body {
     <div class="col-sm-10">
     <select class="form-control" value="formValues" type="button" name="seat_type" id="seat_type" aria-label="Select Ticket Type">
                             <option value="VIP">VIP Php2,500</option>
-                            <option value="PATRON">Patron Php2,000</option>
-                            <option value="VIP Designer">VIP Designer</option>
-                            <option value="VIP Sponsor">VIP Sponsor</option>
+                            <option value="PATRON">PATRON Php2,000</option>
+                            <option value="VIP Designer">VIP DESIGNER</option>
+                            <option value="VIP Sponsor">VIP SPONSOR</option>
                           </select>
     </div>
   </div>

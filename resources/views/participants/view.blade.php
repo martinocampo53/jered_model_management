@@ -27,6 +27,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+            height: 50px;
         }
 
         .container {
@@ -35,11 +36,13 @@
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
         }
 
         h1 {
             text-align: center;
             margin-bottom: 20px;
+            font-size: 45px;
         }
 
         h2 {
@@ -91,52 +94,68 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-image: url('{{ asset('images/lastbg.jpg') }}'); 
+            background-size: 100% 100%;
         }
 
-
+        .whitefont {
+            color: white;
+        }
         .wrap-span {
         white-space: normal;
     }
+
+    .blackbg
+    {
+        background-color: black;
+    }
+
+    .centered-div {
+        justify-content: center;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    .centered-text {
+
+  align-items: center;
+
+}
+
+    
     </style>
 </head>
 <body>
     <div class="container divbg">
-        <h1 class="wrap-span">Spring Glamour Fashion Show:</h1>
-        <h1> CRYSOS</h1>
-        <p style="text-align: center;">by JERED MODEL MANAGEMENT</p>
+        <h1 style="font-weight: bold;" class="wrap-span whitefont">Spring Glamour</h1>
+        <h1 style="font-weight: bold;" class="whitefont"> CRYSOS</h1>
+        <h2 style="font-size: 20px;" class="whitefont wrap-span" style="text-align: center; ">BY: JERED MODEL MANAGEMENT</h2>
 
 
-        <div class="event-details row">
-            <div class="col-6 d-flex justify-content-center">
-                <img style="height: 31rem" src="{{ asset('images/7.png') }}" alt="">
-            </div>
-            <div class="col-6 caption" style="margin-top: 50px">
+        <div class="event-details row whitefont">
+           
+            <div class="col-6 caption" style="margin-top: 11rem">
                 <div>
-                    <span class="wrap-span">SPRING GLAMOUR FASHION SHOW : CRYSOS</span>
-                </div>
-                <div>
-                    <span class="wrap-span">Date: October 27, 2023</span> <span><br> Time: 6:30PM</span>
-                </div>
-                <div>
-                    <span class="wrap-span">ONLY DROP-OFF</span>
-                </div>
-                <div class="contact-info">
-                    <div>
-                        <span class="wrap-span">{{ $participant->name }}</span> <span></span><br>
-                        <span class="wrap-span">Phone Number: </span> <span>{{ $participant->phone_number }}</span><br>
-                        <span class="wrap-span">Email: </span> <span>{{ $participant->email }}</span><br>
-                    </div>
-                    <div>
+                <center><span style="font-weight:bold;" class="wrap-span">{{ $participant->first_name }} {{ $participant->last_name }}</span><br>
+                <span class="wrap-span">{{ $participant->phone_number }}</span><br>
+                <span class="wrap-span">{{ $participant->email }}</span><br></center>
 
-                    </div>
+
                 </div>
+                <div>
+                   <center> <span style="font-weight: bold;" class="wrap-span">DATE: OCTOBER 27, 2023</span> <span style="font-weight: bold;"><br> TIME: 6:00PM</span> </center>
+                </div>
+               
+       
             </div>
         </div>
 
+        <div style="margin-top: 100px;" class="container blackbg">
         <hr>
-        <h1>{{ $participant->seat_type }}</h1>
+       
+        <h2 class="wrap-span whitefont" >{{ $participant->seat_type }} Pass</h2>
+        </div>
     </div>
 </body>

@@ -89,30 +89,30 @@ body {
     <div class="form-group row">
     <label for="first_name" class="col-sm-2 col-form-label">First Name</label>
     <div class="col-sm-10">
-    <input type="text" name="first_name" placeholder="Enter first name" class="form-control" id="first_name" required>
+    <input type="text" name="first_name" placeholder="Enter First Name" class="form-control" id="first_name" required>
     </div>
   </div>
   <div class="form-group row">
     <label for="last_name" class="col-sm-2 col-form-label">Last Name</label>
     <div class="col-sm-10">
-    <input type="text" name="last_name" placeholder="Enter last name" class="form-control" id="last_name" required>
+    <input type="text" name="last_name" placeholder="Enter Last Name" class="form-control" id="last_name" required>
     </div>
   </div>
   <div class="form-group row">
     <label for="phone_number" class="col-sm-2 col-form-label">Phone Number</label>
     <div class="col-sm-10">
-    <input type="tel" name="phone_number" placeholder="Enter phone number" class="form-control" id="phone_number" required>
+    <input type="tel" name="phone_number" placeholder="Enter Phone Number" class="form-control" id="phone_number" required>
     </div>
   </div>
   <div class="form-group row">
     <label for="email" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-    <input type="text" name="email" placeholder="Enter email" class="form-control" id="email" required>
+    <input type="text" name="email" placeholder="Enter Email" class="form-control" id="email" required>
     <label>example@example.com</label>
     </div>
   </div>
   <div class="form-group row">
-    <label for="seat_type" class="col-sm-2 col-form-label">Seat Type</label>
+    <label for="seat_type" class="col-sm-2 col-form-label">Ticket Type</label>
     <div class="col-sm-10">
     <select class="form-control" value="formValues" type="button" name="seat_type" id="seat_type" aria-label="Select Ticket Type">
                             <option value="VIP">VIP Php2,500</option>
@@ -140,19 +140,19 @@ body {
     </div>
   </div>
   <div class="form-group row">
-  <p>Please send payment thru gcash 09123456789 and screenshot of proof of payment to our facebook page. <a href="https://www.facebook.com/JEREDmodelmanagement">JERED Model Management</a></p>
+  <p class="col-sm-12">Please send payment thru Gcash 09179434030 and screenshot of proof of payment to our facebook page. <a href="https://www.facebook.com/JEREDmodelmanagement">JERED Model Management</a></p>
 </div>
   <h3>PAYMENT METHOD - GCASH</h3>
   <div class="gcash">
         <div style="text-align: center">
-      <img src="{{ URL('images/gcash_qr.png') }}" width="200" height="300" alt="Gcash QR">
+      <img src="{{ URL('images/gcash_payment.png') }}" width="200" height="300" alt="Gcash QR">
       </div>
 </div>
   <div class="form-group row">
   <br><br>
-  <p>Once validated, a unique QR Code will be sent to your registered email address and this will serve as your event pass at the entrance.</p>
+  <p class="col-sm-12">Once validated, a unique QR Code will be sent to your registered email address and this will serve as your event pass at the entrance.</p>
   <br>
-  <p>Note: Please be aware that tickets are NON-Refundable</p>
+  <p class="col-sm-12">Note: Please be aware that tickets are NON-Refundable</p>
   </div>
 <div class="form-group row">
     <div class="col-sm-2 col-form-label">

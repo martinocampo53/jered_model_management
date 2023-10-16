@@ -67,9 +67,13 @@ class ParticipantController extends Controller
     public function view(Participants $participant)
     {
         $participants = Participants::get();
-       
+
+        $email = $participant->email; // The email you want to count
+
+        $count = Participants::where('email', $email)->count();
+
+        return view('participants.view', compact('count', 'participant'));
         
-        return view('participants.view', ['participant' => $participant]);
 
     }    
 

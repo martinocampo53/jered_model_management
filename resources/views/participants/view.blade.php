@@ -140,7 +140,9 @@
                 <div>
                 <center><span style="font-weight:bold;" class="wrap-span">{{ $participant->first_name }} {{ $participant->last_name }}</span><br>
                 <span class="wrap-span">{{ $participant->phone_number }}</span><br>
-                <span class="wrap-span">{{ $participant->email }}</span><br></center>
+                <span class="wrap-span">{{ $participant->email }}</span><br>
+                <span class="wrap-span">Ticket Quantity: <br> {{ $count }}</span><br>
+            </center>
 
 
                 </div>

@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- for Facebook & Whatsapp-->
+<meta property="og:site_name" content="CYRSOS">
+<meta property="og:title" content="Spring Glamour Fashion Show 2023">
+<meta property="og:description" content="Registration page">
+
+<!-- Image to display -->
+<meta property="og:image" itemprop="image" content="images/7.png">
+
+<meta property="og:type" content="website">
+<meta property="og:image:type" content="images/7.png">
+
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="400">
+
+<!-- Website URL -->
+<meta property="og:url" content="https://jmmspringglamour.website/">
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

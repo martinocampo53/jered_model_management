@@ -120,8 +120,8 @@ body {
     <select class="form-control" value="formValues" type="button" name="seat_type" id="seat_type" aria-label="Select Ticket Type">
                             <option value="VIP">VIP Php2,500</option>
                             <option value="PATRON">PATRON Php2,000</option>
-                            <option value="VIP Designer">VIP DESIGNER</option>
-                            <option value="VIP Sponsor">VIP SPONSOR</option>
+                            <option value="VIP DESIGNER">VIP DESIGNER</option>
+                            <option value="VIP SPONSOR">VIP SPONSOR</option>
                           </select>
     </div>
   </div>
@@ -143,7 +143,7 @@ body {
     </div>
   </div>
   <div class="form-group row">
-  <p class="col-sm-12">Please send payment thru Gcash 09179434030 and screenshot of proof of payment to our facebook page. <a href="https://www.facebook.com/JEREDmodelmanagement">JERED Model Management</a></p>
+  <p class="col-sm-12">Please send payment thru Gcash 09179434030 and screenshot of proof of payment to our facebook page. <a href="https://www.facebook.com/JEREDmodelmanagement" id="jmmLink">JERED Model Management</a></p>
 </div>
   <h3>PAYMENT METHOD - GCASH</h3>
   <div class="gcash">
@@ -202,9 +202,11 @@ body {
     var lastName = document.getElementById("last_name").value;
     var phoneNumber = document.getElementById("phone_number").value;
     var email = document.getElementById("email").value;
-    var ticketType = document.getElementById("seat_type").value;
+    //var ticketType = document.getElementById("seat_type").value;
     var quantity = document.getElementById("quantity").value;
-    var seatType = ticketType == 1 ? "VIP Php2,500" : "Patron Php2,000";
+    var seatType = document.getElementById("seat_type").value;
+    const fbLink = document.createElement('div');
+    fbLink.innerHTML = "Please don\'t forget to send the PROOF OF PAYMENT to our facebook page. <a href='https://www.facebook.com/JEREDmodelmanagement'>JERED Model Management</a>";
 
     swal({
         title: "Are you sure?",
@@ -215,7 +217,12 @@ body {
     })
     .then(function (isOkay) {
         if (isOkay) {
-            swal("Good job!", "You have successfully registered!", "success")
+              swal({
+                title: 'Thank You!',
+                text: 'You have successfully registered!',
+                content: fbLink,
+                icon: 'success',
+                })
             .then(function() {
                 form.submit();
             });

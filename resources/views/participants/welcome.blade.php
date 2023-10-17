@@ -229,21 +229,20 @@ body {
         title: "Are you sure?",
         text: "This following data will be submitted\n\n Name: " + lastName + ", " + firstName + "\n" + "Phone Number: " + phoneNumber + "\n" + "Email: " + email + "\n" + "Ticket Type: " + seatType + "\n" + "Quantity: " + quantity,
         icon: "warning",
+        content: fbLink,
         buttons: true,
         dangerMode: true,
     })
     .then(function (isOkay) {
         if (isOkay) {
+          form.submit();
               swal({
                 title: 'Thank You!',
                 text: 'You have successfully registered!',
-                content: fbLink,
+                //content: fbLink,
                 icon: 'success',
                 })
-            .then(function() {
-                form.submit();
-            });
-        }
+        };
     });
 
     return false;

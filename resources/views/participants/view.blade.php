@@ -157,7 +157,8 @@
         <div style="margin-top: 100px;" class="container blackbg">
         <hr>
        
-        <h2 class="wrap-span whitefont" >{{ $participant->seat_type }} Pass</h2>
+        <h2 class="wrap-span whitefont" >{{ $participant->seat_type }} PASS</h2>
+        <h2 class="wrap-span whitefont" >{{ $participant->organization_name }}</h2>
         </div>
     </div>
 </body>

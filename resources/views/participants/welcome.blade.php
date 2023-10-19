@@ -139,6 +139,7 @@ body {
                             <option value="PATRON">PATRON Php2,000</option>
                             <option value="VIP DESIGNER">VIP DESIGNER</option>
                             <option value="VIP SPONSOR">VIP SPONSOR</option>
+                            <option value="VIP SPONSOR">VIP MEDIA</option>
                           </select>
     </div>
   </div>
@@ -157,6 +158,12 @@ body {
                             <option value="9">9</option>
                             <option value="10">10</option>
                           </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="organization_label" class="col-sm-2 col-form-label" name="organization_label" id="organization_label">Organization</label>
+    <div class="col-sm-10">
+    <input type="text" name="organization_name" placeholder="Input specific name of the Organization" class="form-control" id="organization_name" required>
     </div>
   </div>
   <div class="form-group row">
@@ -213,7 +220,35 @@ body {
      </script>
      @endif -->
 
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
      <script>
+      $(document).ready(function() {
+        // Initial setup
+        toggleOrganizationName();
+
+        // Add a change event listener to the seat_type dropdown
+        $('#seat_type').change(function() {
+            toggleOrganizationName();
+        });
+    });
+
+  function toggleOrganizationName(){
+    var seatType = $('#seat_type').val();
+    var orgInput = $('#organization_name');
+    var orgLabel = $('#organization_label');
+
+    if (seatType === "VIP SPONSOR" || seatType === "VIP MEDIA" || seatType === "VIP DESIGNER"){
+      orgInput.show();
+      orgInput.prop('disabled', false);
+      orgLabel.show();
+    } else {
+      orgInput.hide();
+      orgInput.prop('disabled', true);
+      orgLabel.hide();
+    }
+  }      
+
   function submitForm(form) {
     var firstName = document.getElementById("first_name").value;
     var lastName = document.getElementById("last_name").value;
@@ -222,12 +257,13 @@ body {
     //var ticketType = document.getElementById("seat_type").value;
     var quantity = document.getElementById("quantity").value;
     var seatType = document.getElementById("seat_type").value;
+    var orgName = document.getElementById("organization_name").value;
     const fbLink = document.createElement('div');
     fbLink.innerHTML = "Please don\'t forget to send the PROOF OF PAYMENT to our facebook page. <a href='https://www.facebook.com/JEREDmodelmanagement'>JERED Model Management</a>";
 
     swal({
         title: "Are you sure?",
-        text: "This following data will be submitted\n\n Name: " + lastName + ", " + firstName + "\n" + "Phone Number: " + phoneNumber + "\n" + "Email: " + email + "\n" + "Ticket Type: " + seatType + "\n" + "Quantity: " + quantity,
+        text: "This following data will be submitted\n\n Name: " + lastName + ", " + firstName + "\n" + "Phone Number: " + phoneNumber + "\n" + "Email: " + email + "\n" + "Ticket Type: " + seatType + "\n" + "Quantity: " + quantity + "\n" + "Organization Name: " + orgName,
         icon: "warning",
         content: fbLink,
         buttons: true,

@@ -15,5 +15,6 @@ class Participants extends Model
         'email',
         'seat_type',
         'seat_number',
+        'organization_name',
     ];
 }

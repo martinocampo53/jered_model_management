@@ -39,6 +39,7 @@ th, td {
       <th scope="col">Email</th>
       <th scope="col">Phone Number</th>
       <th scope="col">Ticket Type</th>
+      <th scope="col">Organization Name</th>
       <th scope="col">Seat Number</th>
 
       <th scope="col">Action</th>
@@ -53,6 +54,7 @@ th, td {
         <td>{{ $participant->email }}</td>
         <td>{{ $participant->phone_number }}</td>
         <td>{{ $participant->seat_type }}</td>
+        <td>{{ $participant->organization_name }}</td>
         <td>{{ $participant->seat_number }}</td>
         <td>
     <a href="{{ route('participants.view', ['participant' => $participant]) }}"><i class="fas fa-eye"></i></i></a> 

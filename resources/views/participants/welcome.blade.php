@@ -139,7 +139,7 @@ body {
                             <option value="PATRON">PATRON Php2,000</option>
                             <option value="VIP DESIGNER">VIP DESIGNER</option>
                             <option value="VIP SPONSOR">VIP SPONSOR</option>
-                            <option value="VIP SPONSOR">VIP MEDIA</option>
+                            <option value="VIP MEDIA">VIP MEDIA</option>
                           </select>
     </div>
   </div>
